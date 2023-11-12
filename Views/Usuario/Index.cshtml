@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Usuario";
+}
+@model List<Usuario>
+
+<p >
+    <a class="btn btn-success" asp-controller="Usuario" asp-action="Add">Agregar usuario</a>
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Modificar</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(Usuario usuario in Model)
+    {
+        <tr>
+            <th scope="row">@usuario.Id</th>
+            <td>@usuario.NombreDeUsuario</td>
+            <td>
+                <a class="btn btn-warning" asp-controller="Usuario" asp-action="Update" asp-route-id="@usuario.Id">Modificar</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-controller="Usuario" asp-action="Delete" asp-route-id="@usuario.Id">Borrar</a>
+            </td>
+        </tr>
+    }
+  </tbody>
+</table>

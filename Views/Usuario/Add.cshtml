@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Usuario";
+}
+
+@model Usuario
+<h1>@ViewData["Title"]</h1>
+<section class="text-center d-flex flex-column align-items-center">
+    <form asp-controller="Usuario" asp-action="Add" class="form-floating">
+        <legend>Nuevo usuario</legend>
+        <fieldset>
+            <div class="input-group mb-3">
+                <span class="input-group-text">📌</span>
+                <div class="form-floating">
+                    <input asp-for="@Model.NombreDeUsuario" class="form-control">
+                    <label asp-for="@Model.NombreDeUsuario">Nombre de usuario</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <button type="submit" class="btn btn-success">Agregar</button>
+        </fieldset>
+    </form>
+</section>
