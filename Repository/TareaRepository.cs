@@ -3,7 +3,7 @@ using System.Data.SQLite;
 using Microsoft.AspNetCore.Authentication;
 using tl2_tp10_2023_jmfloress.Models;
 
-namespace tl2_tp09_2023_jmfloress.Repository;
+namespace tl2_tp10_2023_jmfloress.Repository;
 public class TareaRepository : ITareaRepository
 {
     private string connectionPath = "Data Source=DataBase/kanban.db;Cache=shared";

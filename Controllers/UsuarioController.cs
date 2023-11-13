@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using tl2_tp09_2023_jmfloress.Repository;
+using tl2_tp10_2023_jmfloress.Repository;
 using tl2_tp10_2023_jmfloress.Models;
 
 namespace tl2_tp10_2023_jmfloress.Controllers;

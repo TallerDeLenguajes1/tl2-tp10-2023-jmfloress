@@ -1,7 +1,7 @@
 using tl2_tp10_2023_jmfloress.Models;
 using System.Data.SQLite;
 
-namespace tl2_tp09_2023_jmfloress.Repository;
+namespace tl2_tp10_2023_jmfloress.Repository;
 public class TableroRepository : ITableroRepository
 {
     private string connectionPath = "Data Source=DataBase/kanban.db;Cache=Shared";
