@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Tareas por Tablero";
+}
+@model List<Tarea>
+
+<p>
+    <a class="btn btn-success" asp-controller="Tarea" asp-action="Add" asp-route-idTablero="1">Agregar Tarea</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">IdTablero</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Color</th>
+      <th scope="col">IdUsuarioAsignado</th>
+      <th scope="col">Modificar</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(Tarea tarea in Model)
+    {
+        <tr>
+            <th scope="row">@tarea.Id</th>
+            <th>@tarea.IdTablero</th>
+            <td>@tarea.Nombre</td>
+            <td>@tarea.Estado</td>
+            <td>@tarea.Descripcion</td>
+            <td>@tarea.Color</td>
+            <td>@tarea.IdUsuarioAsignado</td>
+            <td>
+                <a class="btn btn-warning" asp-controller="Tarea" asp-action="Update" asp-route-id="@tarea.Id">Modificar</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-controller="Tarea" asp-action="Delete" asp-route-id="@tarea.Id">Borrar</a>
+            </td>
+        </tr>
+    }
+  </tbody>
+</table>
